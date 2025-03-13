@@ -43,13 +43,13 @@
 			</classes>
 	</test>
 
-	<test name="Test_101">
+	<test name="TestMultiTest">
 			<parameter name="browser" value="Chrome"/>
 			<parameter name="version" value="latest"/>
 			<parameter name="platform" value="LINUX"/>
 			<parameter name="resolution" value="1024x768"/>
 			<classes>
-				<class name="Test101" />
+				<class name="TestMultiTest" />
 			</classes>
 	</test>
 </suite>
