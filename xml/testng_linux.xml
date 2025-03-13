@@ -42,4 +42,14 @@
 				<class name="Test4" />
 			</classes>
 	</test>
+
+	<test name="Test_6">
+			<parameter name="browser" value="Chrome"/>
+			<parameter name="version" value="latest"/>
+			<parameter name="platform" value="LINUX"/>
+			<parameter name="resolution" value="1024x768"/>
+			<classes>
+				<class name="Test6" />
+			</classes>
+	</test>
 </suite>
