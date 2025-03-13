@@ -628,6 +628,406 @@ public class Test4
         /* Once you are outside this code, the list would be empty */
     }  
 
+
+    @Test(description="11 To Do App on React App")
+    public void test1_element_addition_11() throws InterruptedException
+    {
+        ExtentReports extent = new ExtentReports("target/surefire-reports/html/extentReport.html");
+        ExtentTest test2 = extent.startTest("demo application test 1-2", "To Do App test 2");
+
+        driver.get(testURL);
+        Thread.sleep(5000);
+
+        test2.log(LogStatus.PASS, "URL is opened");
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        test2.log(LogStatus.PASS, "Wait created");
+
+        By textField = By.id("sampletodotext");
+
+        WebElement addText = driver.findElement(textField);
+
+        int item_count = 5;
+
+        for (int i = 1; i <= item_count; i++) {
+            addText.click();
+            addText.sendKeys("Adding a new item " + i + Keys.ENTER);
+            test2.log(LogStatus.PASS, "New item No. " + i + " is added");
+            Thread.sleep(2000);
+        }
+
+        WebElement temp_element;
+
+        int totalCount = item_count+5;
+        int remaining = totalCount-1;
+
+        for (int i = 1; i <= totalCount; i++, remaining--) {
+
+            String xpath = "(//input[@type='checkbox'])["+i+"]";
+
+            driver.findElement(By.xpath(xpath)).click();
+            Thread.sleep(500);
+            test2.log(LogStatus.PASS, "Item No. " + i + " marked completed");
+            By remainingItem = By.className("ng-binding");
+            String actualText = driver.findElement(remainingItem).getText();
+            String expectedText = remaining+" of "+totalCount+" remaining";
+
+            if (!expectedText.equals(actualText)) {
+                test2.log(LogStatus.FAIL, "Wrong Text Description");
+                status = "failed";
+            }
+            Thread.sleep(500);
+
+            test2.log(LogStatus.PASS, "Item No. " + i + " completed");
+        }
+
+        extent.endTest(test2);
+        extent.flush();
+
+        /* Once you are outside this code, the list would be empty */
+    }  
+
+    @Test(description="12 To Do App on React App")
+    public void test1_element_addition_12() throws InterruptedException
+    {
+        ExtentReports extent = new ExtentReports("target/surefire-reports/html/extentReport.html");
+        ExtentTest test2 = extent.startTest("demo application test 1-2", "To Do App test 2");
+
+        driver.get(testURL);
+        Thread.sleep(5000);
+
+        test2.log(LogStatus.PASS, "URL is opened");
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        test2.log(LogStatus.PASS, "Wait created");
+
+        By textField = By.id("sampletodotext");
+
+        WebElement addText = driver.findElement(textField);
+
+        int item_count = 5;
+
+        for (int i = 1; i <= item_count; i++) {
+            addText.click();
+            addText.sendKeys("Adding a new item " + i + Keys.ENTER);
+            test2.log(LogStatus.PASS, "New item No. " + i + " is added");
+            Thread.sleep(2000);
+        }
+
+        WebElement temp_element;
+
+        int totalCount = item_count+5;
+        int remaining = totalCount-1;
+
+        for (int i = 1; i <= totalCount; i++, remaining--) {
+
+            String xpath = "(//input[@type='checkbox'])["+i+"]";
+
+            driver.findElement(By.xpath(xpath)).click();
+            Thread.sleep(500);
+            test2.log(LogStatus.PASS, "Item No. " + i + " marked completed");
+            By remainingItem = By.className("ng-binding");
+            String actualText = driver.findElement(remainingItem).getText();
+            String expectedText = remaining+" of "+totalCount+" remaining";
+
+            if (!expectedText.equals(actualText)) {
+                test2.log(LogStatus.FAIL, "Wrong Text Description");
+                status = "failed";
+            }
+            Thread.sleep(500);
+
+            test2.log(LogStatus.PASS, "Item No. " + i + " completed");
+        }
+
+        extent.endTest(test2);
+        extent.flush();
+
+        /* Once you are outside this code, the list would be empty */
+    } 
+
+    @Test(description="13 To Do App on React App")
+    public void test1_element_addition_13() throws InterruptedException
+    {
+        ExtentReports extent = new ExtentReports("target/surefire-reports/html/extentReport.html");
+        ExtentTest test2 = extent.startTest("demo application test 1-2", "To Do App test 2");
+
+        driver.get(testURL);
+        Thread.sleep(5000);
+
+        test2.log(LogStatus.PASS, "URL is opened");
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        test2.log(LogStatus.PASS, "Wait created");
+
+        By textField = By.id("sampletodotext");
+
+        WebElement addText = driver.findElement(textField);
+
+        int item_count = 5;
+
+        for (int i = 1; i <= item_count; i++) {
+            addText.click();
+            addText.sendKeys("Adding a new item " + i + Keys.ENTER);
+            test2.log(LogStatus.PASS, "New item No. " + i + " is added");
+            Thread.sleep(2000);
+        }
+
+        WebElement temp_element;
+
+        int totalCount = item_count+5;
+        int remaining = totalCount-1;
+
+        for (int i = 1; i <= totalCount; i++, remaining--) {
+
+            String xpath = "(//input[@type='checkbox'])["+i+"]";
+
+            driver.findElement(By.xpath(xpath)).click();
+            Thread.sleep(500);
+            test2.log(LogStatus.PASS, "Item No. " + i + " marked completed");
+            By remainingItem = By.className("ng-binding");
+            String actualText = driver.findElement(remainingItem).getText();
+            String expectedText = remaining+" of "+totalCount+" remaining";
+
+            if (!expectedText.equals(actualText)) {
+                test2.log(LogStatus.FAIL, "Wrong Text Description");
+                status = "failed";
+            }
+            Thread.sleep(500);
+
+            test2.log(LogStatus.PASS, "Item No. " + i + " completed");
+        }
+
+        extent.endTest(test2);
+        extent.flush();
+
+        /* Once you are outside this code, the list would be empty */
+    }  
+
+    @Test(description="14 To Do App on React App")
+    public void test1_element_addition_14() throws InterruptedException
+    {
+        ExtentReports extent = new ExtentReports("target/surefire-reports/html/extentReport.html");
+        ExtentTest test2 = extent.startTest("demo application test 1-2", "To Do App test 2");
+
+        driver.get(testURL);
+        Thread.sleep(5000);
+
+        test2.log(LogStatus.PASS, "URL is opened");
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        test2.log(LogStatus.PASS, "Wait created");
+
+        By textField = By.id("sampletodotext");
+
+        WebElement addText = driver.findElement(textField);
+
+        int item_count = 5;
+
+        for (int i = 1; i <= item_count; i++) {
+            addText.click();
+            addText.sendKeys("Adding a new item " + i + Keys.ENTER);
+            test2.log(LogStatus.PASS, "New item No. " + i + " is added");
+            Thread.sleep(2000);
+        }
+
+        WebElement temp_element;
+
+        int totalCount = item_count+5;
+        int remaining = totalCount-1;
+
+        for (int i = 1; i <= totalCount; i++, remaining--) {
+
+            String xpath = "(//input[@type='checkbox'])["+i+"]";
+
+            driver.findElement(By.xpath(xpath)).click();
+            Thread.sleep(500);
+            test2.log(LogStatus.PASS, "Item No. " + i + " marked completed");
+            By remainingItem = By.className("ng-binding");
+            String actualText = driver.findElement(remainingItem).getText();
+            String expectedText = remaining+" of "+totalCount+" remaining";
+
+            if (!expectedText.equals(actualText)) {
+                test2.log(LogStatus.FAIL, "Wrong Text Description");
+                status = "failed";
+            }
+            Thread.sleep(500);
+
+            test2.log(LogStatus.PASS, "Item No. " + i + " completed");
+        }
+
+        extent.endTest(test2);
+        extent.flush();
+
+        /* Once you are outside this code, the list would be empty */
+    }  
+
+    @Test(description="15 To Do App on React App")
+    public void test1_element_addition_15() throws InterruptedException
+    {
+        ExtentReports extent = new ExtentReports("target/surefire-reports/html/extentReport.html");
+        ExtentTest test2 = extent.startTest("demo application test 1-2", "To Do App test 2");
+
+        driver.get(testURL);
+        Thread.sleep(5000);
+
+        test2.log(LogStatus.PASS, "URL is opened");
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        test2.log(LogStatus.PASS, "Wait created");
+
+        By textField = By.id("sampletodotext");
+
+        WebElement addText = driver.findElement(textField);
+
+        int item_count = 5;
+
+        for (int i = 1; i <= item_count; i++) {
+            addText.click();
+            addText.sendKeys("Adding a new item " + i + Keys.ENTER);
+            test2.log(LogStatus.PASS, "New item No. " + i + " is added");
+            Thread.sleep(2000);
+        }
+
+        WebElement temp_element;
+
+        int totalCount = item_count+5;
+        int remaining = totalCount-1;
+
+        for (int i = 1; i <= totalCount; i++, remaining--) {
+
+            String xpath = "(//input[@type='checkbox'])["+i+"]";
+
+            driver.findElement(By.xpath(xpath)).click();
+            Thread.sleep(500);
+            test2.log(LogStatus.PASS, "Item No. " + i + " marked completed");
+            By remainingItem = By.className("ng-binding");
+            String actualText = driver.findElement(remainingItem).getText();
+            String expectedText = remaining+" of "+totalCount+" remaining";
+
+            if (!expectedText.equals(actualText)) {
+                test2.log(LogStatus.FAIL, "Wrong Text Description");
+                status = "failed";
+            }
+            Thread.sleep(500);
+
+            test2.log(LogStatus.PASS, "Item No. " + i + " completed");
+        }
+
+        extent.endTest(test2);
+        extent.flush();
+
+        /* Once you are outside this code, the list would be empty */
+    }  
+
+    @Test(description="16 To Do App on React App")
+    public void test1_element_addition_16() throws InterruptedException
+    {
+        ExtentReports extent = new ExtentReports("target/surefire-reports/html/extentReport.html");
+        ExtentTest test2 = extent.startTest("demo application test 1-2", "To Do App test 2");
+
+        driver.get(testURL);
+        Thread.sleep(5000);
+
+        test2.log(LogStatus.PASS, "URL is opened");
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        test2.log(LogStatus.PASS, "Wait created");
+
+        By textField = By.id("sampletodotext");
+
+        WebElement addText = driver.findElement(textField);
+
+        int item_count = 5;
+
+        for (int i = 1; i <= item_count; i++) {
+            addText.click();
+            addText.sendKeys("Adding a new item " + i + Keys.ENTER);
+            test2.log(LogStatus.PASS, "New item No. " + i + " is added");
+            Thread.sleep(2000);
+        }
+
+        WebElement temp_element;
+
+        int totalCount = item_count+5;
+        int remaining = totalCount-1;
+
+        for (int i = 1; i <= totalCount; i++, remaining--) {
+
+            String xpath = "(//input[@type='checkbox'])["+i+"]";
+
+            driver.findElement(By.xpath(xpath)).click();
+            Thread.sleep(500);
+            test2.log(LogStatus.PASS, "Item No. " + i + " marked completed");
+            By remainingItem = By.className("ng-binding");
+            String actualText = driver.findElement(remainingItem).getText();
+            String expectedText = remaining+" of "+totalCount+" remaining";
+
+            if (!expectedText.equals(actualText)) {
+                test2.log(LogStatus.FAIL, "Wrong Text Description");
+                status = "failed";
+            }
+            Thread.sleep(500);
+
+            test2.log(LogStatus.PASS, "Item No. " + i + " completed");
+        }
+
+        extent.endTest(test2);
+        extent.flush();
+
+        /* Once you are outside this code, the list would be empty */
+    } 
+
+    @Test(description="17 To Do App on React App")
+    public void test1_element_addition_17() throws InterruptedException
+    {
+        ExtentReports extent = new ExtentReports("target/surefire-reports/html/extentReport.html");
+        ExtentTest test2 = extent.startTest("demo application test 1-2", "To Do App test 2");
+
+        driver.get(testURL);
+        Thread.sleep(5000);
+
+        test2.log(LogStatus.PASS, "URL is opened");
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        test2.log(LogStatus.PASS, "Wait created");
+
+        By textField = By.id("sampletodotext");
+
+        WebElement addText = driver.findElement(textField);
+
+        int item_count = 5;
+
+        for (int i = 1; i <= item_count; i++) {
+            addText.click();
+            addText.sendKeys("Adding a new item " + i + Keys.ENTER);
+            test2.log(LogStatus.PASS, "New item No. " + i + " is added");
+            Thread.sleep(2000);
+        }
+
+        WebElement temp_element;
+
+        int totalCount = item_count+5;
+        int remaining = totalCount-1;
+
+        for (int i = 1; i <= totalCount; i++, remaining--) {
+
+            String xpath = "(//input[@type='checkbox'])["+i+"]";
+
+            driver.findElement(By.xpath(xpath)).click();
+            Thread.sleep(500);
+            test2.log(LogStatus.PASS, "Item No. " + i + " marked completed");
+            By remainingItem = By.className("ng-binding");
+            String actualText = driver.findElement(remainingItem).getText();
+            String expectedText = remaining+" of "+totalCount+" remaining";
+
+            if (!expectedText.equals(actualText)) {
+                test2.log(LogStatus.FAIL, "Wrong Text Description");
+                status = "failed";
+            }
+            Thread.sleep(500);
+
+            test2.log(LogStatus.PASS, "Item No. " + i + " completed");
+        }
+
+        extent.endTest(test2);
+        extent.flush();
+
+        /* Once you are outside this code, the list would be empty */
+    }  
+
     @AfterMethod
     public void tearDown()
     {
