@@ -11,7 +11,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class Test4
+public class Test6
 {
     RemoteWebDriver driver = null;
     public static String status = "passed";
