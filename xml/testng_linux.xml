@@ -43,7 +43,7 @@
 			</classes>
 	</test>
 
-	<test name="TestMultiTest">
+	<test name="MultiTestExecutionTest">
 			<parameter name="browser" value="Chrome"/>
 			<parameter name="version" value="latest"/>
 			<parameter name="platform" value="LINUX"/>
