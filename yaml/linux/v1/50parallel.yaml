@@ -3,7 +3,7 @@ version: 0.1
 runson: linux
 
 autosplit: true
-concurrency: 200
+concurrency: 50
 
 # pre:
 #   - mvn dependency:resolve
